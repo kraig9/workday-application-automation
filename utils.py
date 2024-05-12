@@ -27,6 +27,8 @@ def check_element_text_is_empty(element):
 
 def convert_strdate_to_numbpad_keys(str_date):
     keys_list = []
+    if isinstance(str_date, int):
+        str_date = str(str_date)
     for element in str_date:
         try:
             number = int(element)
